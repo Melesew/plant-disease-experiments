@@ -4,5 +4,7 @@
 *.png
 *.gif
 *.pyc
+**/bottleneck
+**/retrain_log
 *.pb
 *.h5
