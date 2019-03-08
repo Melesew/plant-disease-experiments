@@ -17,15 +17,6 @@
 
 - experiment and if possible generate appropriate data using the data to train the model again
 
-
-**Objective**
-
-- Train and Evaluate different DNN Models for plant disease detection problem
-
-- To tackle the problem of scarce real-life representative data, experiment with different generative networks and generate more plant leaf image data
-
-- Implement segmentation pipeline to avoid misclassification due to unwanted input 
-
 # Project Structure
 
 **Plant_Disease_Detection_Benchmark_models**

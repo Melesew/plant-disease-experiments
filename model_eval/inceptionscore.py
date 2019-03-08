@@ -59,7 +59,7 @@ def get_inception_score(images, splits=10):
     
     preds = np.concatenate(preds, 0)
 
-    file = open("inceptionScore_4realData.txt", "a") #inceptionScore_4generated.txt if image_path was to generated datas
+    file = open("inceptionScore_4real_data.txt", "a") #inceptionScore_4generated.txt if image_path was to generated datas
     scores = []
     for i in range(splits):
       part = preds[(i * preds.shape[0] // splits):((i + 1) * preds.shape[0] // splits), :]

@@ -3,21 +3,9 @@
 # ==============================================================================
 r"""Simple transfer learning with Inception v3
 
-With support for TensorBoard.
-
-This example shows how to take a Inception v3 trained on ImageNet images, 
-and train a new top layer that can recognize other classes of images.
-
-The top layer receives as input a 2048-dimensional vector for each image.
-We train a softmax layer on top of this representation. Assuming the softmax layer contains N labels, 
-this corresponds to learning N + 2048*N model parameters corresponding to the learned biases and weights.
-
-The subfolder names of the dataset define what label is applied to each image
-
 run 
-```
-python inception_retrain.py --image_dir ~/path to images (parent of image subfolders)
-```
+# > python inception_retrain.py --image_dir ~/path to images (parent of image subfolders)
+
 This produces a new model file that can be loaded and run by any TensorFlow
 program. 
 
@@ -1099,9 +1087,7 @@ if __name__ == '__main__':
       type=str,
       default='../imagenet/',
       help="""\
-      Path to classify_image_graph_def.pb,
-      imagenet_synset_to_human_label_map.txt, and
-      imagenet_2012_challenge_label_map_proto.pbtxt.\
+      Path to classify_image_graph_def.pb\
       """
   )
   parser.add_argument(
@@ -1156,11 +1142,7 @@ if __name__ == '__main__':
   parser.add_argument(
       '--architecture',
       type=str,
-      default='inception_v3',
-      help="""\
-      Which model architecture to use. 'inception_v3' is the most accurate, but
-      also the slowest. See https://research.googleblog.com/2017/06/mobilenets-open-source-models-for.html
-      for more information on Mobilenet.\
-      """)
+      default='inception_v3'
+    )
   FLAGS, unparsed = parser.parse_known_args()
   tf.app.run(main=main, argv=[sys.argv[0]] + unparsed)
