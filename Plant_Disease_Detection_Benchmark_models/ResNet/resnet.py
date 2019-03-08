@@ -8,7 +8,11 @@ import six
 from keras.models import Model
 from keras.layers import Input,Activation,Dense,Flatten
 from keras.layers.convolutional import Conv2D,MaxPooling2D,AveragePooling2D
+<<<<<<< HEAD
 
+=======
+from keras.layers import Dropout
+>>>>>>> fc79197a34acc3f03f6562e510255de28461b49d
 from keras.layers.merge import add
 from keras.layers.normalization import BatchNormalization
 from keras.regularizers import l2
@@ -205,6 +209,10 @@ class ResnetBuilder(object):
 
         input = Input(shape=input_shape)
         conv1 = _conv_bn_relu(filters=64, kernel_size=(7, 7), strides=(2, 2))(input)
+<<<<<<< HEAD
+=======
+
+>>>>>>> fc79197a34acc3f03f6562e510255de28461b49d
         pool1 = MaxPooling2D(pool_size=(3, 3), strides=(2, 2), padding="same")(conv1)
 
         block = pool1
@@ -245,4 +253,8 @@ class ResnetBuilder(object):
 
     @staticmethod
     def build_resnet_152(input_shape, num_outputs):
+<<<<<<< HEAD
         return ResnetBuilder.build(input_shape, num_outputs, bottleneck, [3, 8, 36, 3])
+=======
+        return ResnetBuilder.build(input_shape, num_outputs, bottleneck, [3, 8, 36, 3])
+>>>>>>> fc79197a34acc3f03f6562e510255de28461b49d
